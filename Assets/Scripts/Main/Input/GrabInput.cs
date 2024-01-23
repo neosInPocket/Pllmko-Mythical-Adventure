@@ -21,11 +21,6 @@ public class GrabInput : MonoBehaviour
 	}
 	private bool active;
 
-	private void Start()
-	{
-		Active = true;
-	}
-
 	private void OnFingerDownHandler(Finger finger)
 	{
 		var fingerPosition = finger.screenPosition.ScreenToWorldPoint();

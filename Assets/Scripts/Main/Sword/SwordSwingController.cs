@@ -13,12 +13,25 @@ public class SwordSwingController : MonoBehaviour
 	private Vector3 lastShootingVelocity;
 	private Vector3 currentFingerPositionDifference;
 	private Finger currentFinger;
+	private Vector2 screenSize;
 
 	private void Start()
 	{
 		EnhancedTouchSupport.Enable();
 		TouchSimulation.Enable();
+		screenSize = Vector2.one.GetSize();
 		hingeJoint2D.enabled = false;
+	}
+
+	public void Enable()
+	{
+		rigid.constraints = RigidbodyConstraints2D.None;
+	}
+
+	public void Disable()
+	{
+		rigid.constraints = RigidbodyConstraints2D.FreezeAll;
+		rigid.velocity = Vector2.zero;
 	}
 
 	private void Update()
@@ -51,9 +64,12 @@ public class SwordSwingController : MonoBehaviour
 		transform.position = fingerPosition + currentDifference;
 	}
 
-	private void OnCollisionEnter2D()
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		Release();
+		if (collision.collider.transform.position.y < -screenSize.y)
+		{
+			Release();
+		}
 	}
 
 	private void OnFingerUpHandler(Finger finger)

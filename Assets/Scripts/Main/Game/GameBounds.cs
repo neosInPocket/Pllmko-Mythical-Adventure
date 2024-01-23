@@ -6,6 +6,7 @@ public class GameBounds : MonoBehaviour
 	[SerializeField] private Bound right;
 	[SerializeField] private Bound down;
 	[SerializeField] private Bound up;
+	[SerializeField] private DestroyBound destroyBound;
 	[SerializeField] private float width;
 
 	private void Start()
@@ -20,5 +21,8 @@ public class GameBounds : MonoBehaviour
 		right.Size = new Vector2(width, screenSize.y * 2);
 		up.Size = new Vector2(screenSize.x * 2, width);
 		down.Size = new Vector2(screenSize.x * 2, width);
+
+		destroyBound.transform.position = new Vector2(0, -screenSize.y - width);
+		destroyBound.Size = new Vector2(4 * screenSize.x, width);
 	}
 }
