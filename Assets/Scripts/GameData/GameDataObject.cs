@@ -10,4 +10,5 @@ public class GameDataObject
 	public int m_healthUpgrade = 1;
 	public int m_swordSize = 0;
 	public int m_swordIndex = 0;
+	public bool[] m_swordPurchaseHistory = { true, false, false, false, false };
 }

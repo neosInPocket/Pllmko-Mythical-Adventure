@@ -26,6 +26,7 @@ public class SwordSwingController : MonoBehaviour
 	public void Enable()
 	{
 		rigid.constraints = RigidbodyConstraints2D.None;
+		rigid.WakeUp();
 	}
 
 	public void Disable()
@@ -60,6 +61,13 @@ public class SwordSwingController : MonoBehaviour
 	private void OnFingerMoveHandler(Finger finger)
 	{
 		Vector3 fingerPosition = finger.screenPosition.ScreenToWorldPoint();
+
+		if (fingerPosition.x > screenSize.x || fingerPosition.x < -screenSize.x)
+		{
+			Release();
+			return;
+		}
+
 		currentDifference = transform.position - currentFingerPosition;
 		transform.position = fingerPosition + currentDifference;
 	}

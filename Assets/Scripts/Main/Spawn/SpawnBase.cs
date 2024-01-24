@@ -6,7 +6,7 @@ public abstract class SpawnBase : MonoBehaviour
 	[SerializeField] private new Rigidbody2D rigidbody2D;
 	private float verticalSpeed;
 
-	public bool Avaliable => gameObject.activeSelf;
+	public bool Avaliable => !gameObject.activeSelf;
 
 	private void Update()
 	{

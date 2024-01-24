@@ -15,6 +15,7 @@ public class Sword : MonoBehaviour
 	[SerializeField] private SwordSwingController swordSwing;
 	[Range(0, 1f)]
 	[SerializeField] private float spriteRendererOpacity;
+	[SerializeField] private float[] sizeValues;
 	public Action RewardCollected { get; set; }
 	public Action<int> Spike { get; set; }
 	private int currentHealth;
@@ -24,6 +25,8 @@ public class Sword : MonoBehaviour
 	{
 		currentHealth = PlayerDataReader.CustomData.m_healthUpgrade;
 		swordSwing.Disable();
+		float sizeValue = sizeValues[PlayerDataReader.CustomData.m_swordSize];
+		transform.localScale = new Vector3(sizeValue, sizeValue, sizeValue);
 	}
 
 	public void Enable()
