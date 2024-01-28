@@ -54,4 +54,13 @@ public class ObjectsSpawnHandler : MonoBehaviour
 		yield return new WaitForSeconds(Random.Range(delayRange.x, delayRange.y));
 		isActing = false;
 	}
+
+	public void Reset()
+	{
+		StopAllCoroutines();
+		ballsPool.Reset();
+		spikesPool.Reset();
+		isActing = false;
+		isEnabled = false;
+	}
 }

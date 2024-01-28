@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
-using System.ComponentModel;
-using UnityEditor.Search;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
+using Vector2 = UnityEngine.Vector2;
+using Quaternion = UnityEngine.Quaternion;
 
 public class Sword : MonoBehaviour
 {
@@ -27,6 +28,14 @@ public class Sword : MonoBehaviour
 		swordSwing.Disable();
 		float sizeValue = sizeValues[PlayerDataReader.CustomData.m_swordSize];
 		transform.localScale = new Vector3(sizeValue, sizeValue, sizeValue);
+	}
+
+	public void Reset()
+	{
+		transform.position = spawnPosition;
+		transform.rotation = Quaternion.identity;
+		spriteRenderer.enabled = true;
+		destroyEffect.SetActive(false);
 	}
 
 	public void Enable()

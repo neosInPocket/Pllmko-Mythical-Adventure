@@ -30,4 +30,12 @@ public class SpawnPool : MonoBehaviour
 			return newObject;
 		}
 	}
+
+	public void Reset()
+	{
+		foreach (var obj in currentObjects)
+		{
+			obj.gameObject.SetActive(false);
+		}
+	}
 }

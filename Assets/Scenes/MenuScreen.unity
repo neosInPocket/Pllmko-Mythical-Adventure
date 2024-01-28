@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDataReader: {fileID: 628371880}
   volumeDataReader: {fileID: 103748880}
-  refreshSettings: 1
+  refreshSettings: 0
 --- !u!4 &112941426
 Transform:
   m_ObjectHideFlags: 0
@@ -968,6 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c570611e3b78cd40a5a1fe1850c1adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 628371880}
 --- !u!1 &231378646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,7 +1860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &385131946
@@ -2872,7 +2873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HUGE GAME
+  m_text: PLIMKO MYTHICAL ADVENTURE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 418eb43f70eedc04591fcf8323608803, type: 2}
   m_sharedMaterial: {fileID: 4187530438234198506, guid: 418eb43f70eedc04591fcf8323608803, type: 2}
@@ -2899,7 +2900,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 185.3
+  m_fontSize: 155.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3407,7 +3408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.041693125, y: 0.40788996}
   m_AnchorMax: {x: 0.9583069, y: 0.7587976}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 155}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &773042100
@@ -8498,7 +8499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912399386
